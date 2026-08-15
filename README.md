@@ -39,8 +39,18 @@ After the IAM role in Account A is assumed, CloudTrail records the cross-account
 <img width="500" src="cross_account_sts_architecture.png"/>
 
 ### Account A
-Account A contains:
+#### Account A contains:
 * IAM Role
 * Lambda function
   * The Lambda function uses AWS STS to request temporary credentials for a role located in Account B.
-<img width="500" src="Lambda-Execution-Role.png"/>
+<img src="images/Lambda-Execution-Role.png"/>
+This image is the IAM Role "Lambda-Execution-Role" that is used by Lambda to request temporary credentials from AWS STS
+
+### Account B
+#### Account B contains:
+* CrossAccountS3AccessRole
+* Secure S3 bucket
+* CloudTrail
+* EventBridge rule
+* SNS topic
+<img src="images/CrossAccountS3AccessRole.png"/>
