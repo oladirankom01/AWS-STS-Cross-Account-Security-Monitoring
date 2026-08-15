@@ -43,3 +43,4 @@ Account A contains:
 * IAM Role
 * Lambda function
   * The Lambda function uses AWS STS to request temporary credentials for a role located in Account B.
+<img width="500" src="Lambda-Execution-Role.png"/>
