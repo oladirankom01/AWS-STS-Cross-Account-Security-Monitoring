@@ -1,8 +1,8 @@
-***Cross-Account Access Investigation***
+# Cross-Account Access Investigation
 
 
 
-*## Scenario*
+## Scenario
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-*## Investigation*
+## Investigation
 
 
 
@@ -30,7 +30,7 @@
 
 
 
-*## Findings*
+## Findings
 
 
 
@@ -48,7 +48,7 @@ The access was authorized because:
 
 
 
-*## Conclusion*
+## Conclusion
 
 
 
