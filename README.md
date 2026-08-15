@@ -33,4 +33,13 @@ After the IAM role in Account A is assumed, CloudTrail records the cross-account
 | Amazon S3 |	Protected resource accessed from Account A |
 | AWS CloudTrail | Recorded API activity and security events |
 | Amazon EventBridge | Detected suspicious/specific STS activity |
-|Amazon SNS	| Delivered security alerts through email |
+| Amazon SNS	| Delivered security alerts through email |
+
+## Project Structure
+<img width="500" src="cross_account_sts_architecture.png"/>
+
+### Account A
+Account A contains:
+* IAM Role
+* Lambda function
+  * The Lambda function uses AWS STS to request temporary credentials for a role located in Account B.
