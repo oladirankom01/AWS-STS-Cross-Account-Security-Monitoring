@@ -1,0 +1,20 @@
+confidential-report.txt
+
+==================================================
+
+AWS Cross Account Security Demo
+
+Owner Account:
+OKomolafe
+
+Classification:
+Confidential
+
+This object should only be accessible through
+AWS STS AssumeRole.
+
+Permanent credentials should never be used.
+
+Created for cloud security learning.
+
+==================================================
