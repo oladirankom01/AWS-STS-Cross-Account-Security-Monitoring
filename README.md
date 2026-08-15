@@ -53,4 +53,5 @@ This image is the IAM Role "Lambda-Execution-Role" that is used by Lambda to req
 * CloudTrail
 * EventBridge rule
 * SNS topic
-<img src="images/CrossAccountS3AccessRole.png"/>
+
+<img width="850" src="images/CrossAccountS3AccessRole.png"/> <img width="800" src="images/S3 Bucket configuration.png"/>
