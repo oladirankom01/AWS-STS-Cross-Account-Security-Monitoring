@@ -58,3 +58,6 @@ This image is the IAM Role "Lambda-Execution-Role" that is used by Lambda to req
 <img width="800" src="images/S3 Bucket configuration.png"/>
 <img width="800" src="images/CloudTrail API Call 1.png"/>
 These images are the IAM Role, S3 Bucket, and the CloudTrail configuration
+
+## What Problem is this project solving?
+The main problem that this problem solves is "How can we get an AWS account access to a resource in another AWS account securely?". In a insecure work environment. Account B would allow Account A permenant access to assume it.
