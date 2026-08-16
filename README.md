@@ -60,4 +60,26 @@ This image is the IAM Role "Lambda-Execution-Role" that is used by Lambda to req
 These images are the IAM Role, S3 Bucket, and the CloudTrail configuration
 
 ## What Problem Is This Project Solving?
-This project presents a solution to the following question: "How can we get an AWS account access to a resource in another AWS account securely?". In a insecure work environment. Account B would allow Account A permenant access to assume it.
+This project presents a solution to the following question: "How can we get an AWS account access to a resource in another AWS account securely?" In a insecure work environment. Account B would allow Account A permanent access to assume it.
+
+## Phase 1: S3 Bucket Security Configuration and Upload file
+### A private S3 bucket was created in Account B to serve as the protected resource.
+
+#### Security configurations included:
+
+* Block Public Access enabled
+* Bucket Owner Enforced Object Ownership
+* Server-side encryption enabled
+* Bucket-level access controlled through IAM and bucket policies
+* No public access
+  
+<img src="images/bucket encryption.png"/>
+<img src="images/bucket permission.png"/>
+
+A test object was uploaded to the bucket for the Lambda function to retrieve.
+
+Security Principle
+
+The S3 bucket was intentionally kept private.
+
+Access is granted through IAM rather than making the bucket publicly accessible
