@@ -117,7 +117,7 @@ was created to allow the Lambda function to execute and interact with AWS servic
 <img width="750" src="images/LambdaBasicExecutionRole.png"/>
 <img width="750" src="images/Cross Account Assume Role.png"/>
 
-The Lambda function was configured to use the execution role.
+### The Lambda Function was configured to use the Execution Role
 
 #### The execution role is separate from the cross-account role:
 * AWS Lambda is executed by the LambdaExecutionRole.
