@@ -99,6 +99,6 @@ The Trust Relationship allows the designated Account A to assume the IAM Role.
 
 The permissions policy was restricted to the required S3 actions.
 
-
+<img width="900" src="images/IAM Policy.png"/>
 
 
