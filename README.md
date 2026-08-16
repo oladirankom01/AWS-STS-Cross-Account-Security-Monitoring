@@ -149,3 +149,20 @@ Test event to print the content of confidential-report.txt
 <img width="900" src="images/Test_CrossAccountSTSReader.png"/>
 
 #### This is the output when the code succeeds. The IAM role successfully accesses confidential-report.txt. Establishing least-privilege on the IAM role to only allowed read-access to confidential-report.txt
+
+## Phase 5: CloudWatch & CloudTrail Auditing
+
+### AWS CloudTrail was configured to record relevant AWS activity.
+#### S3 data events were enabled to monitor object-level operations such as:
+* GetObject
+* PutObject
+* DeleteObject
+
+### Check CloudWatch Logs to see the log stream of the tested event
+#### Provide visibility into Lambda execution and used for debugging
+
+
+CloudTrail records API calls - we are looking at sts: AssumeRole and s3: GetObject
+CloudTrail can tell you who, what, where, what role, and what happened in CloudTrail Logs
+Create a S3 Bucket to store CloudTrail Trails
+
