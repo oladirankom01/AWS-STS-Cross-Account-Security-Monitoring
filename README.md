@@ -80,10 +80,10 @@ This project presents a solution to the following question: "How can we get an A
 * The S3 bucket was intentionally kept private.
 * Access is granted through IAM rather than making the bucket publicly accessible
   
-#### Secured Object in S3 Bucket
+### Secured Object in S3 Bucket
 * A test object was uploaded to the bucket (confidential-report.txt) for the Lambda function to retrieve.
-* confidential-report.txt in the S3 Bucket can only be accessed by CrossAccountS3AccessRole in Account B
-* 
-<img width="750" src="images/encrypted object.png"/>
+  * confidential-report.txt in the S3 Bucket can only be accessed by CrossAccountS3AccessRole in Account B
+
+<img width="400" src="images/encrypted object.png"/>
 
 
