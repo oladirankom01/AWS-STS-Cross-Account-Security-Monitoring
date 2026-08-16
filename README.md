@@ -140,6 +140,10 @@ The temporary credentials are then used to access the S3 object.
 This demonstrates why STS is useful for cloud security: applications can obtain temporary credentials instead of relying on permanent access keys.
 
 ### Deploying the code to Lambda
-Test event to print the content of confidential-report.tx
+Test event to print the content of confidential-report.txt
 
-
+<img width="900" src="images/error - accessdenied.png"/>
+This is the output when the code fails. The IAM role attempts to access another file in the the S3 Bucket called "public-text.txt", but the role is denied access.
+<img width="900" src="images/Test_CrossAccountSTSReader.png"/>
+This is the output when the code succeeds. The IAM role successfully accesses confidential-report.txt.
+#### Establishing least-privilege on the IAM role to only allowed read-access to confidential-report.txt
