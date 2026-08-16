@@ -86,4 +86,19 @@ This project presents a solution to the following question: "How can we get an A
 
 <img width="400" src="images/encrypted object.png"/>
 
+## Phase 2: Cross-Account IAM Role in Account B
+
+An IAM role called:
+### CrossAccountS3AccessRole
+
+The IAM Policy (CrossAccountS3ReadPolicy) allows the role to only perform reading access to the S3 bucket.
+
+The Trust Relationship allows the designated Account A to assume the IAM Role.
+* Trust Relationship says "I trust Account A to assume (CrossAccountS3AccessRole)"
+
+
+The permissions policy was restricted to the required S3 actions.
+
+
+
 
