@@ -100,7 +100,7 @@ The Trust Relationship allows the designated Account A to assume the IAM Role.
 The permissions policy was restricted to the required S3 actions.
 
 <img width="750" src="images/IAM Role.png"/>
-<img width="900" src="images/IAM Policy.png"/>
+<img width="800" src="images/IAM Policy.png"/>
 
 #### This follows the principle of least privilege by granting access only to the required S3 objects.
 
@@ -114,6 +114,9 @@ was created to allow the Lambda function to execute and interact with AWS servic
 * Attached policies (AWSLambdaBasicExecutionRole) - Create CloudWatch log groups and write logs from Lambda
 * Inline policy (AllowCrossAccountAssumeRole) - Allows Lambda to assume the CrossAccountS3AccessRole in Account B using STS AssumeRoles for temp credentials
 
+<img width="750" src="images/LambdaBasicExecutionRole.png"/>
+<img width="750" src="images/Cross Account Assume Role.png"/>
+
 The Lambda function was configured to use the execution role.
 
 #### The execution role is separate from the cross-account role:
@@ -126,5 +129,7 @@ The Lambda function was configured to use the execution role.
 * A role's trust relationship
 * A role's resource permissions
 
-<img src="images/Lambda-Execution-Role.png"/>
+<img width="900" src="images/Lambda-Execution-Role.png"/>
+
+
 
