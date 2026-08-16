@@ -161,6 +161,7 @@ Test event to print the content of confidential-report.txt
 ### Check CloudWatch Logs to see the log stream of the tested event
 #### Provide visibility into Lambda execution and used for debugging
 
+<img width="900" src="images/CloudWatch log event"/>
 
 CloudTrail records API calls - we are looking at sts: AssumeRole and s3: GetObject
 CloudTrail can tell you who, what, where, what role, and what happened in CloudTrail Logs
