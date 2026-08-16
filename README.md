@@ -102,4 +102,29 @@ The permissions policy was restricted to the required S3 actions.
 <img width="750" src="images/IAM Role.png"/>
 <img width="900" src="images/IAM Policy.png"/>
 
+#### This follows the principle of least privilege by granting access only to the required S3 objects.
+
+## Phase 3: Create the Lambda Execution Role and Lambda Function in Account A
+
+An IAM role called:
+### LambdaExecutionRole 
+was created to allow the Lambda function to execute and interact with AWS services.
+
+#### The LambdaExecutionRole will have Attached Policies and Inline Policy
+* Attached policies (AWSLambdaBasicExecutionRole) - Create CloudWatch log groups and write logs from Lambda
+* Inline policy (AllowCrossAccountAssumeRole) - Allows Lambda to assume the CrossAccountS3AccessRole in Account B using STS AssumeRoles for temp credentials
+
+The Lambda function was configured to use the execution role.
+
+#### The execution role is separate from the cross-account role:
+* AWS Lambda is executed by the LambdaExecutionRole.
+* Lambda then assumes the role of CrossAccountS3AccessRole
+* CrossAccountS3AccessRole accesses confidential-report.txt in S3 Bucket
+
+#### This separation helped demonstrate the difference between:
+* A Lambda's execution permissions
+* A role's trust relationship
+* A role's resource permissions
+
+<img src="images/Lambda-Execution-Role.png"/>
 
