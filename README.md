@@ -131,5 +131,15 @@ was created to allow the Lambda function to execute and interact with AWS servic
 
 <img width="900" src="images/Lambda-Execution-Role.png"/>
 
+## Phase 4: AWS STS Cross-Account Access
+
+### The Lambda Function uses LambdaExecutionRole to call AWS STS. Lambda assumes CrossAccountS3AccessRole and given temporary keys from STS.
+
+The temporary credentials are then used to access the S3 object. 
+
+This demonstrates why STS is useful for cloud security: applications can obtain temporary credentials instead of relying on permanent access keys.
+
+### Deploying the code to Lambda
+Test event to print the content of confidential-report.tx
 
 
