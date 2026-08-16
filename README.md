@@ -73,8 +73,8 @@ This project presents a solution to the following question: "How can we get an A
 * Bucket-level access controlled through IAM and bucket policies
 * No public access
   
-<img src="images/bucket encryption.png"/>
-<img src="images/bucket permission.png"/>
+<img width="750" src="images/bucket encryption.png"/>
+<img width="750" src="images/bucket permission.png"/>
 
 A test object was uploaded to the bucket for the Lambda function to retrieve.
 
