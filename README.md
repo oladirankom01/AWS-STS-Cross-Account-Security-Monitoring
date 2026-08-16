@@ -82,7 +82,7 @@ This project presents a solution to the following question: "How can we get an A
   
 ### Secured Object in S3 Bucket
 * A test object was uploaded to the bucket (confidential-report.txt) for the Lambda function to retrieve.
-  * confidential-report.txt in the S3 Bucket can only be accessed by CrossAccountS3AccessRole in Account B
+  * confidential-report.txt in the S3 Bucket can only be accessed by Account B
 
 <img width="400" src="images/encrypted object.png"/>
 
