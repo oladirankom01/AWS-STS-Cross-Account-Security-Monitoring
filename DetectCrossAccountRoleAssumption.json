@@ -1,0 +1,21 @@
+{
+  "source": [
+    "aws.sts"
+  ],
+  "detail-type": [
+    "AWS API Call via CloudTrail"
+  ],
+  "detail": {
+    "eventSource": [
+        "sts.amazonaws.com"
+    ],
+    "eventName": [
+        "AssumeRole"
+    ],
+    "requestParameters": {
+      "roleArn": [
+        "arn:aws:iam::372110443032:role/CrossAccountS3AccessRole"
+      ]   
+    }
+  }
+}
