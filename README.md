@@ -168,5 +168,7 @@ CloudTrail records API calls - we are looking at:
 * s3: GetObject
 
 CloudTrail can tell you who, what, where, what role, and what happened in CloudTrail Logs
-Create a S3 Bucket to store CloudTrail Trails
 
+### Create a S3 Bucket to store CloudTrail Trails
+
+<img width="900" src="images/cloudtrail-security-lab-okomolafe-2026.png"/>
