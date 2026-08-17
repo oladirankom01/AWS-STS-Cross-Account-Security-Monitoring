@@ -250,7 +250,38 @@ Added "public-test.txt" in "secure-cross-account-demo-okomolafe" s3 bucket
 #### This is the output when the code fails. The IAM role attempts to access another file in the the S3 Bucket called "public-text.txt", but the role is denied access.
 * Access was denied since CrossAccountS3AccessRole only has access to ""confidential-report.txt.txt"
 
+## Phase 7: EventBridge Security Detection
 
+An Amazon EventBridge rule was created to detect STS AssumeRole activity.
+
+### The initial rule detected all:
+* AssumeRole events.
+
+During testing, this generated a large number of alerts because the rule was too broad.
+
+### This was the configuration: 
+```json
+{
+  "source": [
+    "aws.sts"
+  ],
+  "detail-type": [
+    "AWS API Call via CloudTrail"
+  ],
+  "detail": {
+    "eventSource": [
+        "sts.amazonaws.com"
+    ],
+    "eventName": [
+        "AssumeRole"
+    ],
+  }
+}
+```
+
+This demonstrated an important security operations concept:
+
+A detection that is too broad can create significant alert fatigue.
 ```json
 {
   "source": [
