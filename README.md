@@ -216,6 +216,8 @@ CloudTrail records API calls - we are looking at:
 
 CloudTrail can tell you who, what, where, what role, and what happened in CloudTrail Logs
 
+<img width="800" src="images/GetObject.png"/>
+
 ### Create a S3 Bucket to store CloudTrail Trails
 
 <img width="900" src="images/cloudtrail-security-lab-okomolafe-2026.png"/>
