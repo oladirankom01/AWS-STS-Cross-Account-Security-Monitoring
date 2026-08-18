@@ -313,6 +313,7 @@ The final event pattern was designed around:
   }
 }
 ```
+<img width="900" src="images/DetectCrossAccountRoleAssumption.png"/>
 
 ## Phase 8: SNS Security Alerting
 
@@ -320,7 +321,7 @@ The final event pattern was designed around:
 
 * CrossAccountSecurityAlerts
 
-When EventBridge detects the designated cross-account role assumption:
+#### When EventBridge detects the designated cross-account role assumption which triggers an alert in AWS SNS and then sends you an email notification
+* The email notification provides a simple security alerting mechanism.
 
 
-The email notification provides a simple security alerting mechanism.
