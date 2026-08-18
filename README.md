@@ -3,8 +3,8 @@
 This project demonstrates how to securely implement cross-account AWS resource access using AWS Security Token Service (STS), IAM roles, Amazon S3, AWS Lambda, AWS CloudTrail, and CloudWatch.
 
 ### Two AWS were created to execute this projects:
-* Account A - This account hosts the AWS Lambda that uses an IAM role to  execute the function, requesting temporary credentials through STS.
-* Account B - This account hosts the S3 bucket with a confidential file and can be accessed by the IAM role that Account A is allowed to assume.
+* **Account A** - This account hosts the AWS Lambda that uses an IAM role to  execute the function, requesting temporary credentials through STS.
+* **Account B** - This account hosts the S3 bucket with a confidential file and can be accessed by the IAM role that Account A is allowed to assume.
 
 After the IAM role in Account A is assumed, CloudTrail records the cross-account AssumeRole activity, while AWS EventBridge detects the activity and sends an alert through AWS SNS when the designated cross-account role is assumed.
 
@@ -88,7 +88,7 @@ This project presents a solution to the following question: "How can we get an A
 
 ## Phase 2: Cross-Account IAM Role in Account B
 
-An IAM role called:
+An IAM role called: 
 ### CrossAccountS3AccessRole
 
 The IAM Policy (CrossAccountS3ReadPolicy) allows the role to only perform reading access to the S3 bucket.
@@ -106,8 +106,8 @@ The permissions policy was restricted to the required S3 actions.
 
 ## Phase 3: Create the Lambda Execution Role and Lambda Function in Account A
 
-An IAM role called:
-### LambdaExecutionRole 
+An IAM role called: 
+### LambdaExecutionRole
 was created to allow the Lambda function to execute and interact with AWS services.
 
 #### The LambdaExecutionRole will have Attached Policies and Inline Policy
