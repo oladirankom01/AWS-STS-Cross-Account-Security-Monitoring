@@ -281,7 +281,13 @@ During testing, this generated a large number of alerts because the rule was too
 
 This demonstrated an important security operations concept:
 
-A detection that is too broad can create significant alert fatigue.
+### Detection Tuning
+
+#### The EventBridge rule was refined to specifically detect the designated cross-account S3 role.
+#### A detection that is too broad can create significant alert fatigue.
+
+The final event pattern was designed around:
+
 ```json
 {
   "source": [
@@ -305,3 +311,14 @@ A detection that is too broad can create significant alert fatigue.
   }
 }
 ```
+
+## Phase 8: SNS Security Alerting
+
+### Amazon SNS was configured with an email subscription:
+
+* CrossAccountSecurityAlerts
+
+When EventBridge detects the designated cross-account role assumption:
+
+
+The email notification provides a simple security alerting mechanism.
