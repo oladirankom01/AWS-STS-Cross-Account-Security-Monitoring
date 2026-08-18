@@ -371,30 +371,16 @@ This reduced unnecessary alerts and improved the detection's precision.
 
 ## Security Concepts Demonstrated
 
-### Identity and Access Management
+**Identity and Access Management** - Implemented cross-account IAM roles and trust relationships.
 
-Implemented cross-account IAM roles and trust relationships.
+**Least Privilege** - Restricted the cross-account role to the minimum required S3 permissions.
 
-### Least Privilege
+**Temporary Credentials** - Used AWS STS rather than permanent access keys.
 
-Restricted the cross-account role to the minimum required S3 permissions.
+**Security Monitoring** - Used CloudTrail to capture AWS API activity.
 
-### Temporary Credentials
+**Detection Engineering** - Created and tuned an EventBridge detection for suspicious or sensitive IAM activity.
 
-Used AWS STS rather than permanent access keys.
+**Alerting** - Used SNS to deliver security notifications.
 
-### Security Monitoring
-
-Used CloudTrail to capture AWS API activity.
-
-### Detection Engineering
-
-Created and tuned an EventBridge detection for suspicious or sensitive IAM activity.
-
-### Alerting
-
-Used SNS to deliver security notifications.
-
-### Alert Fatigue Reduction
-
-Refined a broad detection rule after observing excessive alerts.
+**Alert Fatigue Reduction** - Refined a broad detection rule after observing excessive alerts.
