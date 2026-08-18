@@ -357,3 +357,44 @@ The test successfully demonstrated the following chain:
         ↓
 8. Email alert received
 ```
+### Alert Tuning Test
+
+#### During the initial test, the EventBridge rule generated 100+ notifications because it matched all AssumeRole events.
+
+This led to tuning the detection rule to focus specifically on:
+
+```html
+CrossAccountS3AccessRole
+````
+
+This reduced unnecessary alerts and improved the detection's precision.
+
+## Security Concepts Demonstrated
+
+### Identity and Access Management
+
+Implemented cross-account IAM roles and trust relationships.
+
+### Least Privilege
+
+Restricted the cross-account role to the minimum required S3 permissions.
+
+### Temporary Credentials
+
+Used AWS STS rather than permanent access keys.
+
+### Security Monitoring
+
+Used CloudTrail to capture AWS API activity.
+
+### Detection Engineering
+
+Created and tuned an EventBridge detection for suspicious or sensitive IAM activity.
+
+### Alerting
+
+Used SNS to deliver security notifications.
+
+### Alert Fatigue Reduction
+
+Refined a broad detection rule after observing excessive alerts.
