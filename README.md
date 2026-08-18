@@ -322,6 +322,38 @@ The final event pattern was designed around:
 * CrossAccountSecurityAlerts
 
 #### When EventBridge detects the designated cross-account role assumption which triggers an alert in AWS SNS and then sends you an email notification
+
+```html
+EventBridge
+      ↓
+SNS
+      ↓
+Email
+```
+
 * The email notification provides a simple security alerting mechanism.
 
+<img width="900" src="images/emailAlert.png"/>
 
+## Final Phase: Testing
+
+### The project was tested by manually invoking the Lambda function in Account 
+
+The test successfully demonstrated the following chain:
+```html
+1. Lambda executes
+        ↓
+2. Lambda calls STS AssumeRole
+        ↓
+3. STS provides temporary credentials
+        ↓
+4. Lambda accesses S3 in Account B
+        ↓
+5. CloudTrail records activity
+        ↓
+6. EventBridge detects AssumeRole
+        ↓
+7. SNS publishes notification
+        ↓
+8. Email alert received
+```
