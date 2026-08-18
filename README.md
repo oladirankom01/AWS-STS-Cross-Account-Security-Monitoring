@@ -307,7 +307,7 @@ The final event pattern was designed around:
     ],
     "requestParameters": {
       "roleArn": [
-        "arn:aws:iam::372110443032:role/CrossAccountS3AccessRole"
+        "arn:aws:iam::[ACCOUNT_B_ID]:role/CrossAccountS3AccessRole"
       ]   
     }
   }
@@ -400,6 +400,12 @@ Instead of creating permanent access keys for Account A, STS provides temporary 
 ### 3. Logging does not automatically equal detection
 
 CloudTrail can record thousands of events, but security teams still need detection logic to identify events worth investigating.
+
+## Project Takeaway
+
+This project provided hands-on experience designing and monitoring a cross-account AWS environment. The most important lesson was that security is not just about preventing unauthorized access - **it is also about detecting and responding to access when it occurs.**
+
+By combining IAM, STS, CloudTrail, EventBridge, and SNS, this project demonstrates a basic cloud security monitoring pipeline capable of detecting cross-account role assumptions and generating security alerts.
 
 ## Future Improvements
 
