@@ -384,3 +384,34 @@ This reduced unnecessary alerts and improved the detection's precision.
 **Alerting** - Used SNS to deliver security notifications.
 
 **Alert Fatigue Reduction** - Refined a broad detection rule after observing excessive alerts.
+
+## Key Lessons Learned
+
+### 1. Cross-account access requires both trust and permissions
+
+The target role needs: **Trust Policy + Permissions Policy**
+
+The trust policy determines who can assume the role, while the permissions policy determines what the role can do.
+
+### 2. STS provides temporary access
+
+Instead of creating permanent access keys for Account A, STS provides temporary credentials when the role is assumed.
+
+### 3. Logging does not automatically equal detection
+
+CloudTrail can record thousands of events, but security teams still need detection logic to identify events worth investigating.
+
+## Future Improvements
+
+### Potential improvements for future versions include:
+* Add AWS GuardDuty
+* Add CloudWatch dashboards
+* Forward security events to a SIEM such as Microsoft Sentinel or Splunk
+* Create automated incident response using Lambda
+* Add an alert severity classification
+* Detect unusual source IP addresses
+* Detect role assumption from unexpected AWS accounts
+* Add Terraform infrastructure-as-code
+* Add automated testing
+* Store CloudTrail logs in a dedicated security logging account
+* Create additional EventBridge rules for suspicious S3 activity
