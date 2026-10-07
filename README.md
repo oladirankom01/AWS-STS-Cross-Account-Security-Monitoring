@@ -337,7 +337,7 @@ Email
 
 ## Final Phase: Testing
 
-### The project was tested by manually invoking the Lambda function in Account 
+### The project was tested by manually invoking the Lambda function in Account A 
 
 The test successfully demonstrated the following chain:
 ```html
